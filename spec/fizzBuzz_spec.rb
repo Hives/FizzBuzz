@@ -34,7 +34,7 @@ describe 'fizzbizz' do
   end
 
   it 'return fizzbuzz when passed 0' do
-    expect(fizzbuzz(0)).to eq '0'
+    expect(fizzbuzz(0)).to eq 0
   end
 
 end
