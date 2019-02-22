@@ -29,4 +29,12 @@ describe 'fizzbizz' do
     expect(fizzbuzz(20)).to eq 'buzz'
   end
 
+  it 'returns nil when not an integer' do
+    expect(fizzbuzz("test")).to eq nil
+  end
+
+  it 'return fizzbuzz when passed 0' do
+    expect(fizzbuzz(0)).to eq '0'
+  end
+
 end
