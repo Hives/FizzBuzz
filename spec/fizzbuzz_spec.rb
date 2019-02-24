@@ -1,3 +1,5 @@
+require 'fizzbuzz'
+
 RSpec.describe 'FizzBuzz method' do
   it "should return fizz if input is 3" do
     expect(3.fizzbuzz).to eq "fizz"
