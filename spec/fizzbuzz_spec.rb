@@ -17,8 +17,16 @@ RSpec.describe 'FizzBuzz method' do
     expect(0.fizzbuzz).to eq 'fizzbuzz'
   end
 
-  it "should return NoMethodError if input is not integer" do
+  it "should return NoMethodError if input is Object" do
     expect{Object.new.fizzbuzz}.to raise_error(NoMethodError)
+  end
+
+  it "should return NoMethodError if input is a string" do
+    expect{"hello".fizzbuzz}.to raise_error(NoMethodError)
+  end
+
+  it "should return NoMethodError if input is a symbol" do
+    expect{:hello.fizzbuzz}.to raise_error(NoMethodError)
   end
 
 end
