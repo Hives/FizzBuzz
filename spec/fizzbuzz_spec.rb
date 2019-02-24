@@ -13,6 +13,10 @@ RSpec.describe 'FizzBuzz method' do
     expect(15.fizzbuzz).to eq "fizzbuzz"
   end
 
+  it "should return fizzzbuzz if input is -15" do
+    expect(-15.fizzbuzz).to eq "fizzbuzz"
+  end
+
   it "should return fizzbuzz if input is 0" do
     expect(0.fizzbuzz).to eq 'fizzbuzz'
   end
@@ -27,6 +31,10 @@ RSpec.describe 'FizzBuzz method' do
 
   it "should return NoMethodError if input is a symbol" do
     expect{:hello.fizzbuzz}.to raise_error(NoMethodError)
+  end
+
+  it "should return NoMethodError if input is a float" do
+    expect{3.14.fizzbuzz}.to raise_error(NoMethodError)
   end
 
 end
