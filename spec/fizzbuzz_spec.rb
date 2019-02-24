@@ -5,12 +5,20 @@ RSpec.describe 'FizzBuzz method' do
     expect(3.fizzbuzz).to eq "fizz"
   end
 
-  it "should return fizz if input is 5" do
+  it "should return buzz if input is 5" do
     expect(5.fizzbuzz).to eq "buzz"
   end
 
-  it "should return fizz if input is 15" do
+  it "should return fizzzbuzz if input is 15" do
     expect(15.fizzbuzz).to eq "fizzbuzz"
+  end
+
+  it "should return fizzbuzz if input is 0" do
+    expect(0.fizzbuzz).to eq 'fizzbuzz'
+  end
+
+  it "should return NoMethodError if input is not integer" do
+    expect{Object.new.fizzbuzz}.to raise_error(NoMethodError)
   end
 
 end
